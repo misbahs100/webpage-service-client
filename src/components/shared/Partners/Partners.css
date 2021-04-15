@@ -1,0 +1,7 @@
+.partners-container img{
+    margin-left: 10px;
+}
+.partners-container{
+    height: 150px;
+    display: flex;
+}

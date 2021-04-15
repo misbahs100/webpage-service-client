@@ -1,0 +1,12 @@
+.theme{
+    /* border: 1px solid red; */
+    padding: 5px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme img{
+   height: 40px;
+
+}

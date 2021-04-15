@@ -1,0 +1,41 @@
+.footer-area li{
+    padding-bottom: 10px;
+}
+
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    color: #FFC61A;
+    /* border-radius: 50%; */
+    /* border: 1px solid #FFC61A ; */
+    padding: 10px;
+}
+.social-media .active-icon{
+    background-color: #FFC61A ;
+    color:white;
+}
+.contact-list li{
+    text-decoration: none;
+    color: #cccccc;
+    list-style: none;
+    /* padding-bottom: 10px; */
+    padding: 5px;
+    /* border-bottom: 1px dotted gray; */
+    margin-bottom: 5px;
+    margin-left: 0;
+    
+}
+.copyRight{
+    background-color: black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copyRight span{
+    color: #FFC61A;
+}
+.copyRight span:hover{
+    color: white;
+    cursor: pointer;
+}
