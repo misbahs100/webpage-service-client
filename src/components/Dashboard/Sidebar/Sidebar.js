@@ -46,6 +46,11 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
+                    <Link to="/orderListAdmin" className="text-warning">
+                        <FontAwesomeIcon icon={faListUl} /> <span>All Orders List</span>
+                    </Link>
+                </li>
+                    <li>
                         <Link to="/prescriptions" className="text-warning">
                             <FontAwesomeIcon icon={faFileAlt} /> <span>Reviewers</span>
                         </Link>
