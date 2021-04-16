@@ -21,7 +21,7 @@ const ServiceCard = ({service}) => {
                     <div class="h-bg-inner"></div>
                 </div>
 
-                <Link>
+                <Link to={`order/${service._id}`}>
                     <button class="cart btn" >
                         <span class="price text-warning">{service.price}</span>
                         <span class="add-to-cart">

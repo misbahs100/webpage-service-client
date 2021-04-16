@@ -9,10 +9,17 @@ import {
 import Home from './components/Home/Home/Home';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
 import AddService from './components/Admin/AddService/AddService';
+import Order from './components/User/Order/Order';
+import Login from './components/Login/Login/Login';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -21,16 +28,22 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/admin">
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <PrivateRoute path="/admin">
             <AddAdmin></AddAdmin>
-          </Route>
-          <Route path="/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
             <AddService></AddService>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/order/:id">
+            <Order></Order>
+          </PrivateRoute>
         </Switch>
       </Router>
       
-    </div>
+      </UserContext.Provider>
   );
 }
 

@@ -1,4 +1,4 @@
-import { faCalendar, faCog, faFileAlt, faGripHorizontal, faHome, faServer, faSignOutAlt, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faCog, faCommentDots, faFileAlt, faGripHorizontal, faHome, faListUl, faServer, faShoppingCart, faSignOutAlt, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -18,8 +18,23 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/order" className="text-warning">
+                        <FontAwesomeIcon icon={faShoppingCart} /> <span>Order</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/orderList" className="text-warning">
+                        <FontAwesomeIcon icon={faListUl} /> <span>Order List</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/review" className="text-warning">
+                        <FontAwesomeIcon icon={faCommentDots} /> <span>Review</span>
+                    </Link>
+                </li>
                 {/* {isDoctor && */}
-                <div>
+                {/* <div> */}
                     <li>
                         <Link to="/allPatients" className="text-warning">
                             <FontAwesomeIcon icon={faCalendar} /> <span>Services</span>
@@ -50,7 +65,7 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faCog} /> <span>Settings</span>
                         </Link>
                     </li>
-                </div>
+                {/* </div> */}
                 {/* }  */}
             </ul>
             <div>
