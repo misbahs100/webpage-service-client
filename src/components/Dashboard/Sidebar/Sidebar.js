@@ -29,8 +29,8 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/review" className="text-warning">
-                        <FontAwesomeIcon icon={faCommentDots} /> <span>Review</span>
+                    <Link to="/addTestimonial" className="text-warning">
+                        <FontAwesomeIcon icon={faCommentDots} /> <span>Add Testimony</span>
                     </Link>
                 </li>
                 {/* {isDoctor && */}
@@ -45,11 +45,7 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faUsers} /> <span>Customers</span>
                         </Link>
                     </li>
-                    <li>
-                    <Link to="/orderListAdmin" className="text-warning">
-                        <FontAwesomeIcon icon={faListUl} /> <span>All Orders List</span>
-                    </Link>
-                </li>
+                    
                     <li>
                         <Link to="/prescriptions" className="text-warning">
                             <FontAwesomeIcon icon={faFileAlt} /> <span>Reviewers</span>

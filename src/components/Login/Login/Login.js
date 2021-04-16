@@ -20,8 +20,9 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function (result) {
-      const { displayName, email } = result.user;
-      const signedInUser = { name: displayName, email }
+      const { displayName, email, photoURL } = result.user;
+      console.log(photoURL);
+      const signedInUser = { name: displayName, email, photoURL }
       setLoggedInUser(signedInUser);
       storeAuthToken();
     }).catch(function (error) {
@@ -53,6 +54,7 @@ const Login = () => {
         <div class='circle mediun shade4'></div>
         <div class='circle small shade5'></div>
       </div>
+      {/* animation ends */}
 
       <div className="row align-items-center" style={{ height: "100vh" }}>
       

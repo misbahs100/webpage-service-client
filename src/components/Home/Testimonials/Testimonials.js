@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Testimonials.css';
 import wilson from '../../../images/document.png';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
@@ -25,6 +25,12 @@ const testimonialData = [
 ]
 
 const Testimonials = () => {
+    const [testimonials, setTestimonials] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/testimonials')
+        .then(res => res.json())
+        .then(data => setTestimonials(data))
+    }, [])
     return (
         <section className="testimonial-container p-5">
             <div className="text-center mb-5">
@@ -35,7 +41,7 @@ const Testimonials = () => {
             <div className="">
                 <div className="row mb-5">
                     {
-                        testimonialData.map( testimonial => <TestimonialCard testimonial={testimonial}></TestimonialCard>)
+                        testimonials.map( testimonial => <TestimonialCard testimonial={testimonial}></TestimonialCard>)
                     }
                 </div>
             </div>

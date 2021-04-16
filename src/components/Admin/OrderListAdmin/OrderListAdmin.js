@@ -14,10 +14,8 @@ const OrderListAdmin = () => {
     }, [])
     return (
         <section className="container-fluid row">
-            <Sidebar></Sidebar>
-            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#d0d4d3", height: '100vh' }}>
-                <h3 className="p-1 my-5 ml-2">All orders</h3>
-                <div className="container" >
+            
+                {/* <div className="container" > */}
                     <table className="table">
                         <thead>
                             <tr>
@@ -46,9 +44,9 @@ const OrderListAdmin = () => {
                             }
                         </tbody>
                     </table>
-                </div>
+                {/* </div> */}
 
-            </div>
+            
         </section>
     );
 };
