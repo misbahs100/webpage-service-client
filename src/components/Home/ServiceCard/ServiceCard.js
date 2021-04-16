@@ -6,7 +6,7 @@ const ServiceCard = ({service}) => {
     return (
         <div class="el-wrapper">
             <div class="box-up">
-                <img class="img" src={service.icon} alt="" />
+                <img class="img" src={service.imageURL} alt="" />
                 <div class="img-info">
                     <div class="info-inner">
                         <span class="p-name text-warning">{service.name}</span>

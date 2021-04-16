@@ -7,6 +7,8 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
+import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
+import AddService from './components/Admin/AddService/AddService';
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/admin">
+            <AddAdmin></AddAdmin>
+          </Route>
+          <Route path="/addService">
+            <AddService></AddService>
           </Route>
         </Switch>
       </Router>
