@@ -54,7 +54,7 @@ const AddTestimonial = () => {
                             </div>
                             <div className="form-group">
                                 <label className="text-warning">Quote</label>
-                                <input className="form-control" type="text" name="description" {...register("description", { required: true })} placeholder="what you want to say..."/>
+                                <textarea className="form-control" type="text" name="description" {...register("description", { required: true })} placeholder="what you want to say..."></textarea>
                                 {errors.description && <span>This field is required</span>}
                             </div>
                             <button className="btn btn-warning" type="submit" >Submit</button>

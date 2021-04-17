@@ -17,6 +17,7 @@ import OrderList from './components/User/OrderList/OrderList';
 import OrderListAdmin from './components/Admin/OrderListAdmin/OrderListAdmin';
 import AddTestimonial from './components/Home/AddTestimonal/AddTestimonial';
 import ManageService from './components/Admin/ManageService/ManageService';
+import UpdateService from './components/Admin/UpdateService/UpdateService';
 
 export const UserContext = createContext();
 

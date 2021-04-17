@@ -22,19 +22,6 @@ const OrderList = () => {
             .then(data => setIsAdmin(data));
     }, [])
 
-    // if(isAdmin){
-    //     useEffect(() => {
-    //         fetch(`http://localhost:5000/orders`)
-    //         .then(res => res.json())
-    //             .then(data => {
-    //                 console.log(data);
-    //                 setAllOrders(data);
-    //             })
-    //     }, [])
-    // }
-    // else{
-        
-    // }
    
     return (
         <section className="container-fluid row">
