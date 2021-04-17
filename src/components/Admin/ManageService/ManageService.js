@@ -28,7 +28,7 @@ const ManageService = () => {
             <Sidebar></Sidebar>
             <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#d0d4d3", height: '100vh' }}>
                 <h3 className="p-1 my-5 ml-2">Manage Services</h3>
-                <div className="container card" >
+                <div className="container " >
                 <table className="table">
                         <thead>
                             <tr>
