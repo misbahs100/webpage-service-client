@@ -15,20 +15,21 @@ const OrderListAdmin = () => {
 
    const handleStateChange = (state, id) => {
     //    console.log(state, id)
-    //    const stateInfo = {state};
+       const stateInfo = {state};
+       console.log(stateInfo);
       
-    // fetch(`http://localhost:5000/updateState/${id}`, {
-    //     method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(stateInfo)
-    // })
+    fetch(`http://localhost:5000/updateState/${id}`, {
+        method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(stateInfo)
+    })
     //     // .then(response => response.json())
-    //     .then(data => {
-    //         console.log(data)
-    //         alert("State changed successfully.")
-    //     })
+        .then(data => {
+            console.log(data)
+            alert("State changed successfully.")
+        })
     }
     return (
         <section className="container-fluid row">
