@@ -3,7 +3,7 @@ import firebase  from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router-dom';
-import LoginBg from '../../../images/loginBg.png';
+import LoginBg from '../../../images/loginBg (1).png';
 import './Login.css';
 import { UserContext } from '../../../App';
 
@@ -55,8 +55,8 @@ const Login = () => {
         <div class='circle small shade5'></div>
       </div>
       {/* animation ends */}
-
-      <div className="row align-items-center" style={{ height: "100vh" }}>
+     
+      <div className="row align-items-center w-100" style={{ height: "100vh" }}>
       
         <div className="col-md-6 shadow p-5">
           <div className="form-group">

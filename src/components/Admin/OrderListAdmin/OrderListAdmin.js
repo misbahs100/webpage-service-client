@@ -12,6 +12,24 @@ const OrderListAdmin = () => {
                 setOrders(data);
             })
     }, [])
+
+   const handleStateChange = (state, id) => {
+    //    console.log(state, id)
+    //    const stateInfo = {state};
+      
+    // fetch(`http://localhost:5000/updateState/${id}`, {
+    //     method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(stateInfo)
+    // })
+    //     // .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data)
+    //         alert("State changed successfully.")
+    //     })
+    }
     return (
         <section className="container-fluid row">
             
@@ -33,11 +51,11 @@ const OrderListAdmin = () => {
                                         <td>{order.email}</td>
                                         <td>{order.serviceName}</td>
                                         <td>
-                                        <select className="text-danger" name="status" id="status">
-                                            <option className="text-danger" value="volvo">Pending</option>
-                                            <option className="text-warning" value="saab">On going</option>
-                                            <option className="text-success" value="opel">Done</option>
-                                        </select>
+                                        {/* <select className="" name="status" id="status"> */}
+                                        <button onClick={()=>handleStateChange("pending", order._id)} className="btn-sm btn-danger mr-1" >pending</button>
+                                        <button onClick={()=>handleStateChange("ongoing", order._id)} className="btn-sm btn-warning mr-1" >on going</button>
+                                        <button onClick={()=>handleStateChange("done", order._id)} className="btn-sm btn-success mr-1" >done</button>
+                                        {/* </select> */}
                                         </td>
                                     </tr>
                                 )

@@ -16,6 +16,7 @@ import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import OrderList from './components/User/OrderList/OrderList';
 import OrderListAdmin from './components/Admin/OrderListAdmin/OrderListAdmin';
 import AddTestimonial from './components/Home/AddTestimonal/AddTestimonial';
+import ManageService from './components/Admin/ManageService/ManageService';
 
 export const UserContext = createContext();
 
@@ -51,6 +52,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/addTestimonial">
             <AddTestimonial></AddTestimonial>
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
+            <ManageService></ManageService>
           </PrivateRoute>
         </Switch>
       </Router>

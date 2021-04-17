@@ -1,4 +1,4 @@
-import { faCalendar, faCog, faCommentDots, faFileAlt, faGripHorizontal, faHome, faListUl, faServer, faShoppingCart, faSignOutAlt, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faCog, faCommentDots, faFileAlt, faGripHorizontal, faHome, faListUl, faNetworkWired, faServer, faShoppingCart, faSignOutAlt, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -59,6 +59,11 @@ const Sidebar = () => {
                     <li>
                         <Link to="/addService" className="text-warning" >
                             <FontAwesomeIcon icon={faServer} /> <span>Add Service</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/manageService" className="text-warning" >
+                            <FontAwesomeIcon icon={faNetworkWired} /> <span>Manage Service</span>
                         </Link>
                     </li>
                     <li>

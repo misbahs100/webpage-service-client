@@ -1,5 +1,5 @@
 .login-page{
-    background-color: #4b4545;
+    background-color: #161616;
 }
 
 
@@ -11,7 +11,8 @@
 .circle{
     position: absolute;
     border-radius: 50%;
-    background: rgba(91, 125, 153, 0.966);
+    /* background: rgba(91, 125, 153, 0.966); */
+    background: #f3cf64;
     animation: ripple 15s infinite;
     box-shadow: 0px 0px 1px 0px #0a7dca;
     
