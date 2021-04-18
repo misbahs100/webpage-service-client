@@ -5,7 +5,7 @@ import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 const OrderListAdmin = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://agile-earth-23831.herokuapp.com/orders`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -18,7 +18,7 @@ const OrderListAdmin = () => {
        const stateInfo = {state};
        console.log(stateInfo);
       
-    fetch(`http://localhost:5000/updateState/${id}`, {
+    fetch(`https://agile-earth-23831.herokuapp.com/updateState/${id}`, {
         method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const OrderListAdmin = () => {
         <section className="container-fluid row">
             
                 {/* <div className="container" > */}
-                    <table className="table">
+                    <table className="table text-white">
                         <thead>
                             <tr>
                                 <th scope="col">Name</th>

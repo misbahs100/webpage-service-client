@@ -10,7 +10,7 @@ const AddAdmin = () => {
         setAdmin(newAdmin);
     }
     const handleAddAdmin = () => {
-        fetch('http://localhost:5000/addAnAdmin', {
+        fetch('https://agile-earth-23831.herokuapp.com/addAnAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(admin)
@@ -25,9 +25,9 @@ const AddAdmin = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h5 className="p-1 my-5 ml-2">Add Admin</h5>
-                <div className="container card" style={{ backgroundColor: 'gray' }}>
+            <div className="col-md-10" style={{ position: "absolute", height: '100%', right: 0, backgroundColor: "#161616" }}>
+                <h5 className="p-1 my-5 ml-2 text-warning">Add Admin</h5>
+                <div className="container card" style={{ backgroundColor: 'white' }}>
 
                     <form>
                         <div className="mb-5 mt-5 ">

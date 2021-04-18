@@ -6,7 +6,7 @@ const OrderListUser = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${loggedInUser.email}`)
+        fetch(`https://agile-earth-23831.herokuapp.com/orders/${loggedInUser.email}`)
         .then(res => res.json())
             .then(data => {
                 console.log(data);

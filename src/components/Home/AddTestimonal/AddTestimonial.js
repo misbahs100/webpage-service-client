@@ -16,7 +16,7 @@ const AddTestimonial = () => {
             img: loggedInUser.photoURL
         }
         console.log(testimonialData);
-        fetch('http://localhost:5000/addTestimonial', {
+        fetch('https://agile-earth-23831.herokuapp.com/addTestimonial', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,9 +32,9 @@ const AddTestimonial = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h5 className="p-1 my-5 ml-2">Add Testimonial</h5>
-                <div className="container card" style={{ backgroundColor: 'gray' }}>
+            <div className="col-md-10" style={{ position: "absolute", right: 0, height: '100%', backgroundColor: "#161616" }}>
+                <h5 className="p-1 my-5 ml-2 text-warning">Add Testimonial</h5>
+                <div className="container card" style={{ backgroundColor: 'white' }}>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="mb-5 mt-5">
                             <div className="form-group">
@@ -54,7 +54,7 @@ const AddTestimonial = () => {
                             </div>
                             <div className="form-group">
                                 <label className="text-warning">Quote</label>
-                                <textarea className="form-control" type="text" name="description" {...register("description", { required: true })} placeholder="what you want to say..."></textarea>
+                                <textarea className="form-control" type="text" name="description" {...register("description", { required: true })} placeholder="what you think about us?"></textarea>
                                 {errors.description && <span>This field is required</span>}
                             </div>
                             <button className="btn btn-warning" type="submit" >Submit</button>

@@ -17,7 +17,7 @@ const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${id}`)
+        fetch(`https://agile-earth-23831.herokuapp.com/service/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [id])
@@ -25,10 +25,9 @@ const Order = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#d0d4d3", height: '100vh' }}>
-                <h3 className="p-1 my-5 ml-2">Order</h3>
+            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#161616", height: '100%' }}>
+                <h3 className="p-1 my-5 ml-2 text-warning">Order</h3>
                 <div className="container card" >
-                   {/* <div className="col-md-5"> */}
                    <form>
                         <div className="mb-5 mt-5 ">
                             <div className="form-group">
@@ -47,9 +46,8 @@ const Order = () => {
 
                         </div>
                     </form>
-                   {/* </div> */}
                 </div>
-                <div className="card">
+                <div className="card mt-5">
                     <Elements stripe={stripePromise}>
                         <SimpleCheckoutForm service={service}></SimpleCheckoutForm>
                     </Elements>

@@ -13,7 +13,7 @@ const OrderList = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://agile-earth-23831.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -26,8 +26,8 @@ const OrderList = () => {
     return (
         <section className="container-fluid row">
         <Sidebar></Sidebar>
-        <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#d0d4d3", height: '100vh' }}>
-            {isAdmin ? <h3 className="p-1 my-5 ml-2">All orders</h3> : <h3 className="p-1 my-5 ml-2">Your orders</h3>}
+        <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#161616", height: '100vh' }}>
+            {isAdmin ? <h3 className="p-1 my-5 ml-2 text-warning">All orders</h3> : <h3 className="p-1 my-5 ml-2 text-warning">Your orders</h3>}
             <div className="container" >
            {
                isAdmin ? <OrderListAdmin></OrderListAdmin>

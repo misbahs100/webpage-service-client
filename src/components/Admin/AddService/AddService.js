@@ -32,7 +32,7 @@ const AddService = () => {
             imageURL: imageURL
         }
         console.log(serviceData);
-        fetch('http://localhost:5000/addService', {
+        fetch('https://agile-earth-23831.herokuapp.com/addService', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -48,9 +48,9 @@ const AddService = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h5 className="p-1 my-5 ml-2">Add Service</h5>
-                <div className="container card" style={{ backgroundColor: 'gray' }}>
+            <div className="col-md-10" style={{ position: "absolute", right: 0, height: '100%', backgroundColor: "#161616" }}>
+                <h5 className="p-1 my-5 ml-2 text-warning">Add Service</h5>
+                <div className="container card">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="mb-5 mt-5">
                             <div className="form-group">

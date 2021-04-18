@@ -53,7 +53,7 @@ const SimpleCheckoutForm = ({ service }) => {
             orderTime: new Date().toDateString()
 
         }
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://agile-earth-23831.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -73,13 +73,13 @@ const SimpleCheckoutForm = ({ service }) => {
                 <h5>Payment through your card</h5><br />
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="" className="text-warning">Put your card details below:</label>
+                        <label htmlFor="" className="">Put your card details below:</label>
                         <CardElement className="form-control" /><br />
                     </div>
 
 
-                    <div className="d-flex align-items-center justify-content-between mb-2" style={{ border: '1px solid red' }}>
-                        <div className=""><p style={{ border: '1px solid red' }} className="">Your service will cost {service.price}</p></div>
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                        <div className=""><p className="">Your service will cost {service.price}</p></div>
                         <div><button type="submit" disabled={!stripe} className="btn btn-warning">Pay</button></div>
                     </div>
 

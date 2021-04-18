@@ -32,7 +32,7 @@ const UpdateService = ({ service }) => {
             description: data.description,
             imageURL: imageURL
         }
-        fetch(`http://localhost:5000/updateService`, {
+        fetch(`https://agile-earth-23831.herokuapp.com/updateService`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ const UpdateService = ({ service }) => {
     }
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteService/${id}`, {
+        fetch(`https://agile-earth-23831.herokuapp.com/deleteService/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
