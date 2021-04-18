@@ -1,0 +1,41 @@
+.logo-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* background: #161616; */
+}
+.logo-container img{
+    height: 150px;
+    /* opacity: 0.8; */
+}
+
+.headerMainImages{
+    
+    position: relative;
+}
+.headerMainImages div{
+    background-color: white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.headerMainImages img{
+    height: 50px;
+    /* width: 90px;
+    border-radius: 50%; */
+
+}
+@media (max-width: 590px) {
+    .headerMainImages div{
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+    }
+    .headerMainImages img{
+        height: 30px;
+    }
+}

@@ -35,10 +35,10 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <section className="services-container mt-5">
+        <section className="services-container mt-5 p-5">
             <div className="text-center">
-                <h5 className="text-warning">OUR SERVICES</h5>
-                <h2 className="text-secondary">Services We Provide</h2>
+            <h4 className="text-warning text-uppercase">our services</h4>
+                <h1 className="text-secondary text-uppercase">services we provide</h1>
             </div>
         
             <div className="row w-100 pl-5 pl-md-4">

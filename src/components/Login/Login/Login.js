@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import firebase  from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
-import { useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import LoginBg from '../../../images/loginBg (1).png';
 import './Login.css';
 import { UserContext } from '../../../App';
+import logo from '../../../images/logo-4.png';
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -55,8 +56,8 @@ const Login = () => {
         <div class='circle small shade5'></div>
       </div>
       {/* animation ends */}
-     
-      <div className="row align-items-center w-100" style={{ height: "100vh" }}>
+      <div className="container"><Link to="/home"><img style={{height: '100px'}} src={logo} alt=""/></Link></div>
+      <div className="row align-items-center w-100" style={{ height: "90vh" }}>
       
         <div className="col-md-6 shadow p-5">
           <div className="form-group">

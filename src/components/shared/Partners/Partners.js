@@ -1,7 +1,7 @@
 import React from 'react';
 import './Partners.css';
 import apple from '../../../images/apple-1.png';
-import coca from '../../../images/coca-cola-logo.png';
+import coca from '../../../images/coca-cola-logo-1.jpg';
 import samsung from '../../../images/samsung-logo.png';
 import nike from '../../../images/nike-logo.png';
 
