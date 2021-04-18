@@ -10,7 +10,6 @@ import OrderListUser from '../OrderListUser/OrderListUser';
 const OrderList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
-    
 
     useEffect(() => {
         fetch('https://agile-earth-23831.herokuapp.com/isAdmin', {
@@ -22,21 +21,20 @@ const OrderList = () => {
             .then(data => setIsAdmin(data));
     }, [])
 
-   
     return (
         <section className="container-fluid row">
-        <Sidebar></Sidebar>
-        <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#161616", height: '100vh' }}>
-            {isAdmin ? <h3 className="p-1 my-5 ml-2 text-warning">All orders</h3> : <h3 className="p-1 my-5 ml-2 text-warning">Your orders</h3>}
-            <div className="container" >
-           {
-               isAdmin ? <OrderListAdmin></OrderListAdmin>
-               : <OrderListUser></OrderListUser>
-           }
+            <Sidebar></Sidebar>
+            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#161616", height: '100vh' }}>
+                {isAdmin ? <h3 className="p-1 my-5 ml-2 text-warning">All orders</h3> : <h3 className="p-1 my-5 ml-2 text-warning">Your orders</h3>}
+                <div className="container" >
+                    {
+                        isAdmin ? <OrderListAdmin></OrderListAdmin>
+                            : <OrderListUser></OrderListUser>
+                    }
+                </div>
+
             </div>
-           
-        </div>
-    </section>
+        </section>
     );
 };
 

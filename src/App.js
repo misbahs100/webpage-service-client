@@ -59,8 +59,7 @@ function App() {
           </PrivateRoute>
         </Switch>
       </Router>
-      
-      </UserContext.Provider>
+    </UserContext.Provider>
   );
 }
 

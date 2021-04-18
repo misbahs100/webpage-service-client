@@ -6,7 +6,7 @@ import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 const AddTestimonial = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
- console.log(loggedInUser);
+
     const onSubmit = data => {
         const testimonialData = {
             name: data.name,
@@ -15,7 +15,6 @@ const AddTestimonial = () => {
             from: data.company,
             img: loggedInUser.photoURL
         }
-        console.log(testimonialData);
         fetch('https://agile-earth-23831.herokuapp.com/addTestimonial', {
             method: 'POST',
             headers: {
@@ -26,9 +25,8 @@ const AddTestimonial = () => {
             .then(res => {
                 alert('Thank you for your testimony.')
             })
-
-
     }
+
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
@@ -59,8 +57,6 @@ const AddTestimonial = () => {
                             </div>
                             <button className="btn btn-warning" type="submit" >Submit</button>
                         </div>
-
-
                     </form>
 
                 </div>

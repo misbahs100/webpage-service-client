@@ -8,7 +8,6 @@ import './Sidebar.css';
 const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
-    
 
     useEffect(() => {
         fetch('https://agile-earth-23831.herokuapp.com/isAdmin', {
@@ -44,40 +43,40 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 {isAdmin &&
-                 <div> 
-                    <li>
-                        <Link to="/customers" className="text-warning">
-                            <FontAwesomeIcon icon={faUsers} /> <span>Customers</span>
-                        </Link>
-                    </li>
-                    
-                    <li>
-                        <Link to="/reviewers" className="text-warning">
-                            <FontAwesomeIcon icon={faFileAlt} /> <span>Reviewers</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/admin" className="text-warning" >
-                            <FontAwesomeIcon icon={faUserPlus} /> <span>Add Admin</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/addService" className="text-warning" >
-                            <FontAwesomeIcon icon={faServer} /> <span>Add Service</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/manageService" className="text-warning" >
-                            <FontAwesomeIcon icon={faNetworkWired} /> <span>Manage Service</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/admin/setting" className="text-warning" >
-                            <FontAwesomeIcon icon={faCog} /> <span>Settings</span>
-                        </Link>
-                    </li>
-                </div>
-                } 
+                    <div>
+                        <li>
+                            <Link to="/customers" className="text-warning">
+                                <FontAwesomeIcon icon={faUsers} /> <span>Customers</span>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to="/reviewers" className="text-warning">
+                                <FontAwesomeIcon icon={faFileAlt} /> <span>Reviewers</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/admin" className="text-warning" >
+                                <FontAwesomeIcon icon={faUserPlus} /> <span>Add Admin</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/addService" className="text-warning" >
+                                <FontAwesomeIcon icon={faServer} /> <span>Add Service</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/manageService" className="text-warning" >
+                                <FontAwesomeIcon icon={faNetworkWired} /> <span>Manage Service</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/admin/setting" className="text-warning" >
+                                <FontAwesomeIcon icon={faCog} /> <span>Settings</span>
+                            </Link>
+                        </li>
+                    </div>
+                }
             </ul>
             <div>
                 <Link to="/" className="text-warning"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

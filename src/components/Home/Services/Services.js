@@ -5,27 +5,6 @@ import ecommerce from '../../../images/ecommerce-1.png';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.css';
 
-const serviceData = [
-    {
-        icon: responsive,
-        name: 'Responsive Webpage',
-        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-        price: '$10'
-    },
-    {
-        icon: standard,
-        name: 'Standard and Professional',
-        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-        price: '$34'
-    },
-    {
-        icon: ecommerce,
-        name: 'E-commerce websites',
-        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-        price: '$52'
-    }
-]
-
 const Services = () => {
     const [services, setServices] = useState([]);
 
@@ -37,10 +16,10 @@ const Services = () => {
     return (
         <section className="services-container p-5">
             <div className="text-center mt-5">
-            <h4 className="text-warning text-uppercase">our services</h4>
+                <h4 className="text-warning text-uppercase">our services</h4>
                 <h1 className="text-secondary text-uppercase">services we provide</h1>
             </div>
-        
+
             <div className="row w-100 pl-5 pl-md-4 mb-5">
                 <div class="container page-wrapper">
                     <div class="page-inner">

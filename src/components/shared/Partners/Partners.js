@@ -5,11 +5,6 @@ import coca from '../../../images/coca-cola-logo-1.jpg';
 import samsung from '../../../images/samsung-logo.png';
 import nike from '../../../images/nike-logo.png';
 
-const partners = [
-    {img: apple}
-]
-
-
 const Partners = () => {
     return (
         <div className="partners-container bg-warning">

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import firebase  from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { Link, useHistory, useLocation } from 'react-router-dom';
@@ -22,7 +22,6 @@ const Login = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function (result) {
       const { displayName, email, photoURL } = result.user;
-      console.log(photoURL);
       const signedInUser = { name: displayName, email, photoURL }
       setLoggedInUser(signedInUser);
       storeAuthToken();
@@ -46,7 +45,6 @@ const Login = () => {
   return (
     <div className="login-page">
 
-
       {/* animation */}
       <div class='ripple-background'>
         <div class='circle xxlarge shade1'></div>
@@ -56,9 +54,12 @@ const Login = () => {
         <div class='circle small shade5'></div>
       </div>
       {/* animation ends */}
-      <div className="container"><Link to="/home"><img style={{height: '100px'}} src={logo} alt=""/></Link></div>
+
+      <div className="container">
+        <Link to="/home"><img style={{ height: '100px' }} src={logo} alt="" /></Link>
+      </div>
+
       <div className="row align-items-center w-100" style={{ height: "90vh" }}>
-      
         <div className="col-md-6 shadow p-5">
           <div className="form-group">
             <label htmlFor="" className="text-warning">User Name</label>
@@ -79,6 +80,7 @@ const Login = () => {
           <img className="img-fluid" src={LoginBg} alt="" />
         </div>
       </div>
+
     </div>
   );
 };

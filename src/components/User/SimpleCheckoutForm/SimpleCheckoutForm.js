@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { UserContext } from '../../../App';
 
 const SimpleCheckoutForm = ({ service }) => {
-    console.log(service)
     const stripe = useStripe();
     const elements = useElements();
 
@@ -53,6 +52,7 @@ const SimpleCheckoutForm = ({ service }) => {
             orderTime: new Date().toDateString()
 
         }
+
         fetch('https://agile-earth-23831.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
@@ -61,7 +61,6 @@ const SimpleCheckoutForm = ({ service }) => {
             body: JSON.stringify(order)
         })
             .then(res => {
-                console.log('server side: ', res);
                 alert('Service ordered Successfully.');
             })
 
@@ -76,15 +75,12 @@ const SimpleCheckoutForm = ({ service }) => {
                         <label htmlFor="" className="">Put your card details below:</label>
                         <CardElement className="form-control" /><br />
                     </div>
-
-
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <div className=""><p className="">Your service will cost {service.price}</p></div>
                         <div><button type="submit" disabled={!stripe} className="btn btn-warning">Pay</button></div>
                     </div>
-
-
                 </form>
+                
                 {
                     paymentError && <p style={{ color: 'red' }}>{paymentError}</p>
                 }

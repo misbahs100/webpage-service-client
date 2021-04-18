@@ -38,9 +38,6 @@ const ManageService = () => {
                     </table>
                 </div>
             </div>
-
-           
-
         </section>
     );
 };

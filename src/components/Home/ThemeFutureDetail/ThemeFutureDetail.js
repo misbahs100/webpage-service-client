@@ -6,7 +6,7 @@ const ThemeFutureDetail = ({ theme }) => {
         <div className="col-md-3 col-sm-6 col-12 mt-5">
             <div className="d-flex align-items-center">
                 <div className="theme mr-1  bg-warning ">
-                    <img  src={theme.icon} alt="" />
+                    <img src={theme.icon} alt="" />
                 </div>
                 <div className="">
                     <p>{theme.text}</p>

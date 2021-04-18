@@ -5,10 +5,11 @@ const AddAdmin = () => {
     const [admin, setAdmin] = useState({})
 
     const handleBlur = e => {
-        const newAdmin = { email: e.target.value};
-        
+        const newAdmin = { email: e.target.value };
+
         setAdmin(newAdmin);
     }
+    
     const handleAddAdmin = () => {
         fetch('https://agile-earth-23831.herokuapp.com/addAnAdmin', {
             method: 'POST',
@@ -36,7 +37,7 @@ const AddAdmin = () => {
                                 <input name="email" type="email" onBlur={handleBlur} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                             </div>
                             <div className="form-group">
-                            <button onClick={handleAddAdmin} type="submit" className="btn btn-warning">Submit</button>
+                                <button onClick={handleAddAdmin} type="submit" className="btn btn-warning">Submit</button>
                             </div>
 
                         </div>

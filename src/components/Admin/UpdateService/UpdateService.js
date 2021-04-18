@@ -44,7 +44,6 @@ const UpdateService = ({ service }) => {
                 alert("Service updated successfully.")
             })
 
-        console.log(data)
     }
 
     const handleDelete = (id) => {
@@ -64,11 +63,11 @@ const UpdateService = ({ service }) => {
             <td>{service.description}</td>
             <td>
                 <button type="button" style={{ color: 'green' }} className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><FontAwesomeIcon icon={faPen} /></button>
-                {/* <UpdateService modalIsOpen={modalIsOpen} serviceId={service._id} closeModal={closeModal}></UpdateService> */}
+                
 
                 <button style={{ color: 'red' }} className="btn" onClick={() => handleDelete(service._id)}><FontAwesomeIcon icon={faTrashAlt} /></button>
 
-                {/* modal for updating */}
+                {/* bootstrap modal for updating */}
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -104,10 +103,7 @@ const UpdateService = ({ service }) => {
                                             <input onChange={handleImageUpload} className="form-control" name="file" type="file" />
 
                                         </div>
-                                        {/* <div className="d-flex justify-content-between">
-                        <button className="btn btn-warning" type="submit" >Submit</button>
-                        <button onClick={closeModal} className="btn btn-dark"><FontAwesomeIcon className="text-danger" icon={faWindowClose} /> Close</button>
-                        </div> */}
+                                        
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <button type="submit" class="btn btn-warning">Update Info</button>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceCard.css';
 
-const ServiceCard = ({service}) => {
-    const {imageURL, name, description, _id, price} = service;  // destructering
+const ServiceCard = ({ service }) => {
+    const { imageURL, name, description, _id, price } = service;  // destructering
     return (
         <div class="el-wrapper">
             <div class="box-up">

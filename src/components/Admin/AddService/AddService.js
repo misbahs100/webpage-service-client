@@ -43,8 +43,8 @@ const AddService = () => {
                 alert('Service Added Successfully.')
             })
 
-
     }
+    
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
@@ -65,12 +65,12 @@ const AddService = () => {
                             </div>
                             <div className="form-group">
                                 <label className="text-warning">Description</label>
-                                <input  className="form-control"  type="text" name="description" {...register("description", { required: true })} />
+                                <input className="form-control" type="text" name="description" {...register("description", { required: true })} />
                                 {errors.description && <span>This field is required</span>}
                             </div>
                             <div className="form-group">
                                 <label className="text-warning">Upload image</label>
-                                <input onChange={handleImageUpload} className="form-control" name="file" type="file"  />
+                                <input onChange={handleImageUpload} className="form-control" name="file" type="file" />
                                 {/* {errors.files && <span>This field is required</span>} */}
                             </div>
                             <button className="btn btn-warning" type="submit" >Submit</button>

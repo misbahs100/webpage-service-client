@@ -32,11 +32,10 @@ const ThemeFuture = () => {
             <div className="">
                 <div className="row mb-5">
                     {
-                        themeFutureData.map( theme => <ThemeFutureDetail theme={theme}></ThemeFutureDetail>)
+                        themeFutureData.map(theme => <ThemeFutureDetail theme={theme}></ThemeFutureDetail>)
                     }
                 </div>
             </div>
-
         </section>
     );
 };

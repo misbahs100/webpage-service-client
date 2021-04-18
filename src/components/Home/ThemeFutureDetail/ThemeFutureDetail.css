@@ -1,5 +1,4 @@
 .theme{
-    /* border: 1px solid red; */
     padding: 5px;
     height: 100px;
     width: 100px;
@@ -13,6 +12,7 @@
    height: 40px;
 
 }
+
 @media (max-width: 590px) {
     .theme{
         width: 80px;
