@@ -4,6 +4,7 @@ import standard from '../../../images/professional.png';
 import ecommerce from '../../../images/ecommerce-1.png';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.css';
+import gif from '../../../images/giphy.gif';
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -24,6 +25,9 @@ const Services = () => {
                 <div class="container page-wrapper">
                     <div class="page-inner">
                         <div class="row mt-5 pt-5">
+                           {
+                               services.length === 0 && <div className="m-auto"><img src={gif} alt="" /></div>
+                           }
                             {
                                 services.map(service => <ServiceCard service={service}></ServiceCard>)
                             }

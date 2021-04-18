@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Testimonials.css';
 import wilson from '../../../images/document.png';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
+import gif from '../../../images/giphy.gif';
 
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
@@ -20,6 +21,9 @@ const Testimonials = () => {
             </div>
 
             <div className="row mb-5 mt-5">
+                {
+                    testimonials.length === 0 && <div className="m-auto"><img src={gif} alt="" /></div>
+                }
                 {
                     testimonials.map(testimonial => <TestimonialCard testimonial={testimonial}></TestimonialCard>)
                 }
