@@ -1,13 +1,9 @@
-import { faPen, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import UpdateService from '../UpdateService/UpdateService';
 
 const ManageService = () => {
     const [services, setServices] = useState([]);
-    const [modalIsOpen,setIsOpen] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -18,23 +14,7 @@ const ManageService = () => {
             })
     }, [])
 
-    const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteService/${id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                alert('One service deleted.')
-            })
-    }
 
-    function openModal() {
-        setIsOpen(true);
-      }
-    
-      function closeModal(){
-        setIsOpen(false);
-      }
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
@@ -52,30 +32,14 @@ const ManageService = () => {
                         </thead>
                         <tbody>
                             {
-                                services.map(service => <tr>
-                                    <th scope="row">{service._id}</th>
-                                    <td>{service.name}</td>
-                                    <td>{service.description}</td>
-                                    <td>
-                                        <button  onClick={openModal} type="button" style={{ color: 'green' }} className="btn" ><FontAwesomeIcon icon={faPen} /></button>
-                                        <UpdateService modalIsOpen={modalIsOpen} serviceId={service._id} closeModal={closeModal}></UpdateService>
-
-                                        <button style={{ color: 'red' }} className="btn" onClick={() => handleDelete(service._id)}><FontAwesomeIcon icon={faTrashAlt} /></button>
-                                        
-                                       
-
-
-
-                                    </td>
-                                </tr>)
+                                services.map(service => <UpdateService service={service}></UpdateService>)
                             }
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            {/* modal for updating */}
-
+           
 
         </section>
     );

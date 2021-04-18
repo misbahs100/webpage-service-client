@@ -9,17 +9,6 @@ const AddService = () => {
     const [file, setFile] = useState(null);
     const [imageURL, setImageURL] = useState(null);
 
-    // const handleBlur = e => {
-    //     const newInfo = { ...info };
-    //     newInfo[e.target.name] = e.target.value;
-    //     setInfo(newInfo);
-    // }
-
-    // const handleFileChange = (e) => {
-    //     console.log(e.target.files);
-    //     const newFile = e.target.file;
-    //     setFile(newFile);
-    // }
     const handleImageUpload = (event) => {
         const imageData = new FormData();
         imageData.set('key', '2dad6d7bf6cef1ec0ba10a9e39066744');
