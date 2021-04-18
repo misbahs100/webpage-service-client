@@ -23,8 +23,8 @@ const themeFutureData = [
 
 const ThemeFuture = () => {
     return (
-        <section className="theme-container mt-5 p-5">
-            <div className="text-center mb-5">
+        <section className="theme-container  p-5 ">
+            <div className="text-center mb-5 mt-5">
                 <h4 className="text-warning text-uppercase">For easy creation</h4>
                 <h1 className="text-secondary text-uppercase">Theme Futures</h1>
             </div>

@@ -17,6 +17,7 @@ const TestimonialCard = ({ testimonial }) => {
                         </h6>
                     </div>
                 </div>
+
             </div>
         </div>
     );

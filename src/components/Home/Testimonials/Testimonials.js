@@ -33,18 +33,17 @@ const Testimonials = () => {
     }, [])
     return (
         <section className="testimonial-container p-5">
-            <div className="text-center mb-5">
+            <div className="text-center mb-5 mt-5">
                 <h4 className="text-warning text-uppercase">Happy Client's</h4>
                 <h1 className="text-secondary text-uppercase">testimonials</h1>
             </div>
 
-            <div className="">
-                <div className="row mb-5">
+                <div className="row mb-5 mt-5">
                     {
                         testimonials.map( testimonial => <TestimonialCard testimonial={testimonial}></TestimonialCard>)
                     }
                 </div>
-            </div>
+          
 
         </section>
     );

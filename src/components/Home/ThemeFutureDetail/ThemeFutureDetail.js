@@ -4,11 +4,11 @@ import './ThemeFutureDetail.css';
 const ThemeFutureDetail = ({ theme }) => {
     return (
         <div className="col-md-3 col-sm-6 col-12 mt-5">
-            <div className="d-flex ">
-                <div className="theme mr-1 col-5 bg-warning rounded-circle">
+            <div className="d-flex align-items-center">
+                <div className="theme mr-1  bg-warning ">
                     <img  src={theme.icon} alt="" />
                 </div>
-                <div className="theme">
+                <div className="">
                     <p>{theme.text}</p>
                 </div>
             </div>
